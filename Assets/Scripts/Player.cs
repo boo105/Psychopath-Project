@@ -6,16 +6,11 @@ public class Player : MonoBehaviour {
 
     public float moveSpeed=5f;
 
-    private Animator animator;
-
     private Transform tr;
-    private float v;
-    private float h;
 
 	// Use this for initialization
 	void Start () {
         tr = GetComponent<Transform>();
-        animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -25,9 +20,6 @@ public class Player : MonoBehaviour {
 
     void Movement()
     {
-        h = Input.GetAxis("Horizontal");
-        v = Input.GetAxis("Vertical");
-        animator.SetFloat("speed", v);
 
         if(Input.GetKey(KeyCode.W))
         {
@@ -45,11 +37,6 @@ public class Player : MonoBehaviour {
         {
             transform.Translate(Vector3.right * moveSpeed * Time.deltaTime, Space.World);
         }
-
-
-        /*Vector2 moveDir = (Vector2.up * v) + (Vector2.right * h);
-        tr.Translate(moveDir * moveSpeed * Time.deltaTime, Space.Self);*/
-
       
 
     }
