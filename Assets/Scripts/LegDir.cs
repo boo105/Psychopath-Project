@@ -21,11 +21,12 @@ public class LegDir : MonoBehaviour {
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
 
-
-        if (v != 0)
-            animator.SetFloat("speed", Mathf.Abs(v));
+        if(v!=0)
+            animator.SetFloat("speed",Mathf.Abs(v));
         if(h!=0)
             animator.SetFloat("speed",Mathf.Abs(h));
+
+
 
         if (Input.GetKey(KeyCode.W))
         {
