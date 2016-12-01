@@ -2,15 +2,15 @@
 using System.Collections;
 
 public class CameraFollowPlayer : MonoBehaviour {
-
     GameObject player;
+    PlayerMovement pm;
     public bool followPlayer = true;
     Vector3 mousePos;
     Camera cam;
-
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
+        pm = Player.GetComponent<PlayerMovement> ();
         cam = Camera.main;
 	}
 	
@@ -19,6 +19,7 @@ public class CameraFollowPlayer : MonoBehaviour {
         if(Input.GetKey (KeyCode.LeftShift))
         {
             followPlayer = false;
+            pm.setMoving(false);
         } else {
             followPlayer = true;
         }
