@@ -335,7 +335,7 @@ Animator:
   m_GameObject: {fileID: 855443646}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 403911e7c3d97184da4f24debac1302a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3b648adc75a6c0b489f8eb81e366550e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -614,6 +614,7 @@ GameObject:
   - 124: {fileID: 1652916555}
   - 81: {fileID: 1652916554}
   - 114: {fileID: 1652916559}
+  - 114: {fileID: 1652916560}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -700,6 +701,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde6593dce510e94b92c10046e0a77d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1652916560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1652916553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4b49b6560288046b4fed61c3ba701d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followPlayer: 1
 --- !u!1 &1865378432
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +770,7 @@ GameObject:
   - 61: {fileID: 1994037659}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
